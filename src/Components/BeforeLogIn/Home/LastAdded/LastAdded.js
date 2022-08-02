@@ -39,7 +39,9 @@ class LastAdded extends Component {
                 <ul>
                     {
                         this.state.notes.map(note => (
-                            <LastAddedPart to={"/" + note.parentHeader + "/" + note.url} header={note.headerName} body={note.shortExplaining} id={note._id} />
+                            <React.Fragment key={note._id}>
+                                <LastAddedPart to={"/" + note.parentHeader + "/" + note.url} header={note.headerName} body={note.shortExplaining} />
+                            </React.Fragment>
                         ))
                     }
 

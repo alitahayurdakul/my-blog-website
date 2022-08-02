@@ -53,7 +53,7 @@ function Navbar(props) {
 
                     <li>
                         <Link to="/mail-operations">
-                            <i class="far fa-envelope fa-2x"></i>
+                            <i className="far fa-envelope fa-2x"></i>
                             <span className="nav-text">
                                 Mail
                             </span>

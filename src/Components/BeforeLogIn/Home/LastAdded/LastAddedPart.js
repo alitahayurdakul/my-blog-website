@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-function LastAddedPart({ id, to, header, body }) {
+function LastAddedPart({ to, header, body }) {
     return (
-        <li key={id.toString()}>
+        <li>
             <Link to={to}>
                 <span>
                     {header}
