@@ -1,4 +1,4 @@
-#My Note Website
+# My Note Website
 Purpose:
 * Hide my important notes
 * Share my important notes
