@@ -20,9 +20,9 @@ function NotePage() {
                 .then(response => {
                     setNote(response.data)
                 })
-                // .catch(() => {
+            // .catch(() => {
 
-                // })
+            // })
         }
 
         getNote();
@@ -35,21 +35,20 @@ function NotePage() {
                 <div className='notes-part-body'>
                     {
                         note ? <div className='notes-part-left'>
-                                        <Helmet>
-                <title>
-                    {note.headerName} | ALİ TAHA YURDAKUL
-                </title>
-            </Helmet>
-                        <h3>{note.headerName}</h3>
-                        <p className='mb-2'>
-                            <i className="fas fa-calendar-alt me-2" />
-                            {note.date.split("-").reverse().join("-")}
-                        </p>
+                            <Helmet>
+                                <title>
+                                    {note.headerName} | ALİ TAHA YURDAKUL
+                                </title>
+                            </Helmet>
+                            <h3>{note.headerName}</h3>
+                            <p className='mb-2'>
+                                <i className="fas fa-calendar-alt me-2" />
+                                {note.date.split("-").reverse().join("-")}
+                            </p>
 
-                        {parse(`${note.content}`)}
-                    </div>: <div>YÜKLENİYOR...</div>
+                            {parse(`${note.content}`)}
+                        </div> : <div>YÜKLENİYOR...</div>
                     }
-                    
 
                     <OtherNotesLink />
                 </div>
