@@ -6,6 +6,7 @@ import OtherNotesLink from '../OtherNotesLink/OtherNotesLink';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { API } from '../../../API/Api';
+import { Helmet } from 'react-helmet';
 
 
 function NotePage() {
@@ -34,6 +35,11 @@ function NotePage() {
                 <div className='notes-part-body'>
                     {
                         note ? <div className='notes-part-left'>
+                                        <Helmet>
+                <title>
+                    {note.headerName} | ALİ TAHA YURDAKUL
+                </title>
+            </Helmet>
                         <h3>{note.headerName}</h3>
                         <p className='mb-2'>
                             <i className="fas fa-calendar-alt me-2" />

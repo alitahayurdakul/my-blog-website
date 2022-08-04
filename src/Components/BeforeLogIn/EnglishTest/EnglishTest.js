@@ -4,6 +4,7 @@ import { API } from '../../../API/Api';
 import Navbar from '../Navbar/Navbar';
 import OtherNotesLink from '../OtherNotesLink/OtherNotesLink';
 import { createRandomNumber } from './createRandomNumber';
+import { Helmet } from 'react-helmet';
 
 class EnglishTest extends Component {
 
@@ -31,7 +32,7 @@ class EnglishTest extends Component {
     onClickRadio = (e) => {
         this.setState({
             answer: e.target.value,
-            message:""
+            message: ""
         })
     }
 
@@ -41,7 +42,7 @@ class EnglishTest extends Component {
             this.setState({
                 message: "Tebrikler!!!",
                 messageClass: " alert-success",
-                status:true
+                status: true
             })
         }
 
@@ -57,8 +58,8 @@ class EnglishTest extends Component {
     onClickNext = () => {
         this.setState({
             message: "",
-            status:false,
-            question:this.state.questions[createRandomNumber(this.state.questions.length)]
+            status: false,
+            question: this.state.questions[createRandomNumber(this.state.questions.length)]
         })
     }
 
@@ -70,6 +71,9 @@ class EnglishTest extends Component {
         return (
             <>
                 <Navbar />
+                <Helmet>
+                    <title>İngilizce Test | ALİ TAHA YURDAKUL</title>
+                </Helmet>
                 <div className='notes-part'>
 
                     <div className='notes-part-body'>

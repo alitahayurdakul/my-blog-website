@@ -6,9 +6,10 @@ import Navbar from '../Navbar/Navbar';
 import OtherNotesLink from '../OtherNotesLink/OtherNotesLink';
 import PartNoteStructure from '../PartNoteStructure/PartNoteStructure';
 import JavaScriptHeader from './Header/JavaScriptHeader';
+import { Helmet } from 'react-helmet';
 
 function JavaScriptNotes() {
-    const [ javaScriptNotes, setJavaScriptNotes ] = useState([]);
+    const [javaScriptNotes, setJavaScriptNotes] = useState([]);
 
     useEffect(() => {
 
@@ -24,6 +25,9 @@ function JavaScriptNotes() {
         <>
             <Navbar />
             <div className='notes-part'>
+                <Helmet>
+                    <title>JavaScript Notları | ALİ TAHA YURDAKUL</title>
+                </Helmet>
 
                 <JavaScriptHeader />
 
