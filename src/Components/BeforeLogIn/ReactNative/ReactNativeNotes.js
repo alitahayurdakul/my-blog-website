@@ -6,10 +6,10 @@ import Navbar from '../Navbar/Navbar';
 import OtherNotesLink from '../OtherNotesLink/OtherNotesLink';
 import PartNoteStructure from '../PartNoteStructure/PartNoteStructure';
 import ReactNativeHeader from './Header/ReactNativeHeader';
-
+import { Helmet } from 'react-helmet';
 
 function ReactNativeNotes() {
-    const [ReactNativeNotes, setReactNativeNotes ] = useState([]);
+    const [ReactNativeNotes, setReactNativeNotes] = useState([]);
 
     useEffect(() => {
 
@@ -25,6 +25,12 @@ function ReactNativeNotes() {
         <>
             <Navbar />
             <div className='notes-part'>
+
+                <Helmet>
+                    <title data-react-helmet="true">
+                        React Native Notları | ALİ TAHA YURDAKUL
+                    </title>
+                </Helmet>
 
                 <ReactNativeHeader />
 

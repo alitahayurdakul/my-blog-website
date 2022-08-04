@@ -6,6 +6,7 @@ import PartNoteStructure from '../PartNoteStructure/PartNoteStructure';
 import axios from 'axios';
 import { API } from '../../../API/Api';
 import OtherNotesLink from '../OtherNotesLink/OtherNotesLink';
+import { Helmet } from 'react-helmet';
 
 function ReactNotes() {
   const [reactNotes, setReactNotes] = useState("");
@@ -30,6 +31,12 @@ function ReactNotes() {
       <Navbar />
       <div className='notes-part'>
 
+        <Helmet>
+          <title data-react-helmet="true">
+            React Notları | ALİ TAHA YURDAKUL
+          </title>
+        </Helmet>
+
         <Header />
 
         <div className='notes-part-body'>
@@ -39,11 +46,11 @@ function ReactNotes() {
                 reactNotes.length !== 0 ? reactNotes.map(note => (
                   <React.Fragment key={note._id}>
                     <PartNoteStructure to={note.url} header={note.headerName} body={note.shortExplaining} />
-                    </React.Fragment>
-                    )) : <div>Herhangi bir not bulunmamaktadır.</div>
+                  </React.Fragment>
+                )) : <div>Herhangi bir not bulunmamaktadır.</div>
               }
 
-                  </ul>
+            </ul>
           </div>
 
           <OtherNotesLink />

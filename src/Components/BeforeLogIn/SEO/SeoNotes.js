@@ -6,6 +6,7 @@ import Navbar from '../Navbar/Navbar';
 import OtherNotesLink from '../OtherNotesLink/OtherNotesLink';
 import PartNoteStructure from '../PartNoteStructure/PartNoteStructure';
 import SeoHeader from './Header/SeoHeader';
+import Helmet from 'react-helmet';
 
 function Seo() {
   const [seoNotes, setSeoNotes] = useState([]);
@@ -25,6 +26,11 @@ function Seo() {
     <>
       <Navbar />
       <div className='notes-part'>
+      <Helmet>
+          <title data-react-helmet="true">
+            SEO Notları | ALİ TAHA YURDAKUL
+          </title>
+        </Helmet>
 
         <SeoHeader />
 
