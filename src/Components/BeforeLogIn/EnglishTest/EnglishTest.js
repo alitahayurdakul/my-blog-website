@@ -116,7 +116,7 @@ class EnglishTest extends Component {
                                         }
 
                                     </div>
-                                </> : null
+                                </> : <div>Soru bulunamadı.</div>
                             }
 
                         </div>

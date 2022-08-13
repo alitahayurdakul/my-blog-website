@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from '../../../../Images/seo.jpg';
+import Image from '../../../../Images/others.jpeg';
 
 function SeoHeader() {
   return (

@@ -4,12 +4,12 @@ import Home from './Components/BeforeLogIn/Home/Home';
 import ReactNotes from './Components/BeforeLogIn/React/ReactNotes';
 import NotePage from './Components/BeforeLogIn/NotePage/NotePage';
 import NodeJSNotes from './Components/BeforeLogIn/NodeJs/NodeJSNotes';
-import SeoNotes from './Components/BeforeLogIn/SEO/SeoNotes';
+import OtherNotes from './Components/BeforeLogIn/Others/OtherNotes';
 import JavaScriptNotes from './Components/BeforeLogIn/JavaScript/JavaScriptNotes';
 import ReactNativeNotes from './Components/BeforeLogIn/ReactNative/ReactNativeNotes';
 import SignIn from './Components/AfterLogIn/LogIn/SignIn/SignIn';
 import ForgetPassword from './Components/AfterLogIn/LogIn/ForgetPassword/ForgetPassword';
-import { useEffect } from 'react';
+import { useEffect, Suspense } from 'react';
 import axios from 'axios';
 import { API } from './API/Api';
 import MyInformation from './Components/AfterLogIn/MyInformation/MyInformation';
@@ -37,7 +37,7 @@ function App(props) {
       .catch(async (error) => {
         if (error.response) {
           if (error.response.data.isLogin)
-          await props.setIsLogin(false)
+            await props.setIsLogin(false)
         }
       });
   }
@@ -47,42 +47,42 @@ function App(props) {
   }, [])
 
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/react" element={<ReactNotes />} />
-        <Route path="/react/:url" element={<NotePage />} />
-        <Route path="/nodejs" element={<NodeJSNotes />} />
-        <Route path="/nodejs/:url" element={<NotePage />} />
-        <Route path="/seo" element={<SeoNotes />} />
-        <Route path="/seo/:url" element={<NotePage />} />
-        <Route path="/javascript" element={<JavaScriptNotes />} />
-        <Route path="/javascript/:url" element={<NotePage />} />
-        <Route path="/react-native" element={<ReactNativeNotes />} />
-        <Route path="/react-native/:url" element={<NotePage />} />
-        <Route path="/english-test/" element={<EnglishTest />} />
-        <Route path="/sign-in" element={<SignIn />} />
-        <Route path="/forget-password" element={<ForgetPassword />} />
-        {
-          props.isLogin ? <>
-          <Route path="/my-information" element={<MyInformation />} />
-          <Route path="/mail-operations" element={<MailOperations />} />
-          <Route path="/notes/list" element={<NotesList />} />
-          <Route path="/notes/add" element={<NoteAdd />} />
-          <Route path="/notes/update/:id" element={<NotesUpdate />} />
-          <Route path="/english-test/list" element={<EnglishWordsList />} />
-          <Route path="/english-test/add" element={<EnglishWordAdd />} />
-          <Route path="/english-test/word/update/:id" element={<EnglishWordUpdate />} />
-        </>:null
-        }
-      </Routes>
-    </>
+      <Suspense fallback={<div>Yükleniyor...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/react" element={<ReactNotes />} />
+          <Route path="/react/:url" element={<NotePage />} />
+          <Route path="/nodejs" element={<NodeJSNotes />} />
+          <Route path="/nodejs/:url" element={<NotePage />} />
+          <Route path="/others" element={<OtherNotes />} />
+          <Route path="/others/:url" element={<NotePage />} />
+          <Route path="/javascript" element={<JavaScriptNotes />} />
+          <Route path="/javascript/:url" element={<NotePage />} />
+          <Route path="/react-native" element={<ReactNativeNotes />} />
+          <Route path="/react-native/:url" element={<NotePage />} />
+          <Route path="/english-test/" element={<EnglishTest />} />
+          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/forget-password" element={<ForgetPassword />} />
+          {
+            props.isLogin ? <>
+              <Route path="/my-information" element={<MyInformation />} />
+              <Route path="/mail-operations" element={<MailOperations />} />
+              <Route path="/notes/list" element={<NotesList />} />
+              <Route path="/notes/add" element={<NoteAdd />} />
+              <Route path="/notes/update/:id" element={<NotesUpdate />} />
+              <Route path="/english-test/list" element={<EnglishWordsList />} />
+              <Route path="/english-test/add" element={<EnglishWordAdd />} />
+              <Route path="/english-test/word/update/:id" element={<EnglishWordUpdate />} />
+            </> : null
+          }
+        </Routes>
+      </Suspense>
   );
 }
 
 const mapStateToProps = state => {
   return {
-      isLogin:state.currencyListReducer.isLogin
+    isLogin: state.currencyListReducer.isLogin
   }
 };
 
@@ -90,8 +90,8 @@ const mapDispatchToProps = dispatch => (
   (
     bindActionCreators({
       setIsLogin
-    },dispatch)
+    }, dispatch)
   )
 );
 
-export default connect(mapStateToProps,mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -11,7 +11,7 @@ export default function Body() {
             <NotesLink to="nodejs" headerName="Node.Js Notları" key={2} />
             <NotesLink to="javascript" headerName="JavaScript Notları" key={3} />
             <NotesLink to="react-native" headerName="React Native Notları" key={4} />
-            <NotesLink to="seo" headerName="SEO Notları" key={5} />
+            <NotesLink to="others" headerName="Diğer Notlar" key={5} />
         </ul>
       </div>
 

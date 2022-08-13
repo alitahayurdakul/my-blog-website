@@ -169,7 +169,7 @@ class NoteAdd extends Component {
                   <option value="nodejs">Node Js</option>
                   <option value="javascript">JavaScript</option>
                   <option value="react-native">React Native</option>
-                  <option value="seo">SEO</option>
+                  <option value="other">Diğer</option>
                 </select>
               </div>
 

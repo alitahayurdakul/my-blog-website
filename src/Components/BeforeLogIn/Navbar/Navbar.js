@@ -52,7 +52,7 @@ class Navbar extends Component {
                             </li>
 
                             <li className="nav-item">
-                                <Link to="/seo" className='nav-link'>SEO</Link >
+                                <Link to="/others" className='nav-link'>Diğer</Link >
                             </li>
 
                             <li className="nav-item">
@@ -63,18 +63,13 @@ class Navbar extends Component {
                             <div className="footer-social">
                                 <ul>
                                     <li >
-                                        <a href="/" alt="face" title="face" >
-                                            <i className="fa fa-facebook" />
-                                        </a>
-                                    </li>
-                                    <li >
-                                        <a href="/" alt="twit" title="twit">
+                                        <a href="/#" alt="twit" title="twit">
                                             <i className="fa fa-twitter" />
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="/" alt="insta" title="insta">
+                                        <a href="/#" alt="insta" title="insta">
                                             <i className="fa fa-instagram" />
                                         </a>
 

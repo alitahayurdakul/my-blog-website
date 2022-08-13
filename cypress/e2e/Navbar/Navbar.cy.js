@@ -45,11 +45,11 @@ describe("navbar renders", () => {
         cy.url().should("include", "/react-native")
     });
 
-    it("navbar SEO link is working right?", () => {
+    it("navbar Other link is working right?", () => {
         cy.get(".navbar");
         cy.get(".navbar-nav");
-        cy.contains("SEO").click();
-        cy.url().should("include", "/seo")
+        cy.contains("Diğer").click();
+        cy.url().should("include", "/others")
     });
 
     it("navbar English Test link is working right?", () => {
@@ -101,5 +101,4 @@ describe("navbar renders", () => {
         cy.getById("log-out").click()
             .should("not.exist")
     });
-
 })

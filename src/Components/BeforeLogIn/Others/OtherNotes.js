@@ -5,22 +5,22 @@ import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
 import OtherNotesLink from '../OtherNotesLink/OtherNotesLink';
 import PartNoteStructure from '../PartNoteStructure/PartNoteStructure';
-import SeoHeader from './Header/SeoHeader';
+import OtherHeader from './Header/OtherHeader';
 import Helmet from 'react-helmet';
 
-function Seo() {
-  const [seoNotes, setSeoNotes] = useState([]);
+function Others() {
+  const [otherNotes, setOtherNotes] = useState([]);
 
   useEffect(() => {
 
-    const getSeoNotes = async () => {
-      await axios.get(API + "/notes/group-notes/seo")
-        .then(response => setSeoNotes(response.data));
+    const getOtherNotes = async () => {
+      await axios.get(API + "/notes/group-notes/other")
+        .then(response => setOtherNotes(response.data));
     }
 
-    getSeoNotes();
+    getOtherNotes();
 
-  }, [setSeoNotes]);
+  }, [setOtherNotes]);
 
   return (
     <>
@@ -28,17 +28,17 @@ function Seo() {
       <div className='notes-part'>
       <Helmet>
           <title data-react-helmet="true">
-            SEO Notları | ALİ TAHA YURDAKUL
+            Diğer Notlar | ALİ TAHA YURDAKUL
           </title>
         </Helmet>
 
-        <SeoHeader />
+        <OtherHeader />
 
         <div className='notes-part-body'>
           <div className='notes-part-left'>
             <ul>
               {
-                seoNotes.length !== 0 ? seoNotes.map(note => (
+                otherNotes.length !== 0 ? otherNotes.map(note => (
                   <PartNoteStructure to={note.url} header={note.headerName} body={note.shortExplaining} id={note._id} />
                 )) : <div>Herhangi bir not bulunmamaktadır.</div>
               }
@@ -53,4 +53,4 @@ function Seo() {
     </>
   )
 }
-export default Seo;
+export default Others;

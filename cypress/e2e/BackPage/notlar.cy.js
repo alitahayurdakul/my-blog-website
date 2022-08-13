@@ -3,8 +3,8 @@
 describe("english-test page list", () => {
 
     beforeEach(() => {
-        const userName = "ali5"
-        const password = "totts8613"
+        const userName = "*****"
+        const password = "******"
         cy.request({
             method: "POST",
             url: "http://localhost:5000/authentication/sign-in",
@@ -36,28 +36,28 @@ describe("english-test page list", () => {
         })
     });
 
-    // it.only("english test list fake api", () => {
-    //     cy.intercept({
-    //         method:'GET',
-    //         url:'http://localhost:5000/english-test/list'
-    //     }, {
-    //         statusCode: 200,
-    //         fixture:'englishWord.json' //body
-    //     }).as("a");
-    //     cy.visit("http://localhost:3000/english-test/list")
-    //     cy.wait("@a",{timeout:5000}).should(({request,response}) =>  {
-    //         cy.get("tbody").find("tr").should("have.length",response.body.length)
-    //     })
-    // });
+    it.skip("english test list fake api", () => {
+        cy.intercept({
+            method:'GET',
+            url:'http://localhost:5000/english-test/list'
+        }, {
+            statusCode: 200,
+            fixture:'englishWord.json' //body
+        }).as("a");
+        cy.visit("http://localhost:3000/english-test/list")
+        cy.wait("@a",{timeout:5000}).should(({request,response}) =>  {
+            cy.get("tbody").find("tr").should("have.length",response.body.length)
+        })
+    });
 
-    // it.only("english test list fake api", () => {
-    //     cy.intercept("GET","http://localhost:3000/english-test/list",(req) => {
-    //         req.url="http://localhost:3000/english-test/list"
+    it.skip("english test list fake api", () => {
+        cy.intercept("GET","http://localhost:3000/english-test/list",(req) => {
+            req.url="http://localhost:3000/english-test/list"
 
-    //         req.continue((res) => {
-    //             expect(res.statusCode).to.equal(404)
-    //         })
-    //     }).as("a")
-    // });
+            req.continue((res) => {
+                expect(res.statusCode).to.equal(404)
+            })
+        }).as("a")
+    });
 
 })

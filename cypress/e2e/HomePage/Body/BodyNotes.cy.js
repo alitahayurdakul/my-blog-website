@@ -17,15 +17,15 @@ describe("HomePage Body Notes renders", () => {
             .contains("React Notları")
             .click()
         
-        cy.url().should("equal","http://localhost:3000/react")
+        cy.url().should("equal","https://alitahayurdakul.github.io/my-blog-website/#/react")
     });
 
-    it("seo notları link is working?", () => {
+    it("Others notes link is working?", () => {
         cy.get(".home-body-part")
             .find("li")
-            .contains("SEO Notları")
+            .contains("Diğer Notlar")
             .click()
         
-        cy.url().should("equal","http://localhost:3000/seo")
+        cy.url().should("equal","https://alitahayurdakul.github.io/my-blog-website/#/others")
     });
 });
