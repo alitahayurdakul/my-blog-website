@@ -54,8 +54,8 @@ function App(props) {
           <Route path="/react/:url" element={<NotePage />} />
           <Route path="/nodejs" element={<NodeJSNotes />} />
           <Route path="/nodejs/:url" element={<NotePage />} />
-          <Route path="/others" element={<OtherNotes />} />
-          <Route path="/others/:url" element={<NotePage />} />
+          <Route path="/other" element={<OtherNotes />} />
+          <Route path="/other/:url" element={<NotePage />} />
           <Route path="/javascript" element={<JavaScriptNotes />} />
           <Route path="/javascript/:url" element={<NotePage />} />
           <Route path="/react-native" element={<ReactNativeNotes />} />

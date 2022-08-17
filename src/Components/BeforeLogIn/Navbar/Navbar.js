@@ -52,7 +52,7 @@ class Navbar extends Component {
                             </li>
 
                             <li className="nav-item">
-                                <Link to="/others" className='nav-link'>Diğer</Link >
+                                <Link to="/other" className='nav-link'>Diğer</Link >
                             </li>
 
                             <li className="nav-item">
