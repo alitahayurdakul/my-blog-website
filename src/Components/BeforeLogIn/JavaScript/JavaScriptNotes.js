@@ -36,7 +36,9 @@ function JavaScriptNotes() {
                         <ul>
                             {
                                 javaScriptNotes ? javaScriptNotes.map(note => (
-                                    <PartNoteStructure to={note.url} header={note.headerName} body={note.shortExplaining} id={note._id} />
+                                    <React.Fragment key={note._id}>
+                                        <PartNoteStructure to={note.url} header={note.headerName} body={note.shortExplaining}/>
+                                    </React.Fragment>
                                 )) : <div>Herhangi bir not bulunmamaktadır.</div>
                             }
 

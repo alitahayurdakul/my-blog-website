@@ -7,6 +7,7 @@ import configureStore from './redux/reducers/configureStore';
 
 
 const store = configureStore();
+
 ReactDOM.render(
   <Provider store={store}>
     <HashRouter>

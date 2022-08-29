@@ -33,9 +33,7 @@ class LastAdded extends Component {
     render() {
         return (
             <div className='last-added'>
-
                 <h2>En Son Eklenenler</h2>
-
                 <ul>
                     {
                         this.state.notes.map(note => (
@@ -44,7 +42,6 @@ class LastAdded extends Component {
                             </React.Fragment>
                         ))
                     }
-
                 </ul>
             </div>
         )

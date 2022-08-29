@@ -26,7 +26,7 @@ function Others() {
     <>
       <Navbar />
       <div className='notes-part'>
-      <Helmet>
+        <Helmet>
           <title data-react-helmet="true">
             Diğer Notlar | ALİ TAHA YURDAKUL
           </title>
@@ -39,7 +39,9 @@ function Others() {
             <ul>
               {
                 otherNotes.length !== 0 ? otherNotes.map(note => (
-                  <PartNoteStructure to={note.url} header={note.headerName} body={note.shortExplaining} id={note._id} />
+                  <React.Fragment key={note._id}>
+                    <PartNoteStructure to={note.url} header={note.headerName} body={note.shortExplaining} />
+                  </React.Fragment>
                 )) : <div>Herhangi bir not bulunmamaktadır.</div>
               }
 

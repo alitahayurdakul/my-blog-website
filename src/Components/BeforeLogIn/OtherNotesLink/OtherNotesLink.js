@@ -16,7 +16,7 @@ function OtherNotesLink() {
 
                     if (response.data.length > 10) {
 
-                        for (let i = 0; i <= 3; i++) {
+                        for (let i = 0; i <= 9; i++) {
                             lastAddedNotes.push(response.data[i]);
                         };
 
