@@ -5,8 +5,9 @@ import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
 import OtherNotesLink from '../OtherNotesLink/OtherNotesLink';
 import PartNoteStructure from '../PartNoteStructure/PartNoteStructure';
-import ReactNativeHeader from './Header/ReactNativeHeader';
 import { Helmet } from 'react-helmet';
+import CommonHeader from '../CommonHeader/CommonHeader';
+import Image from '../../../Images/react-native.png';
 
 function ReactNativeNotes() {
     const [ReactNativeNotes, setReactNativeNotes] = useState([]);
@@ -32,7 +33,10 @@ function ReactNativeNotes() {
                     </title>
                 </Helmet>
 
-                <ReactNativeHeader />
+                <CommonHeader>
+                    <div className='notes-part-header' style={{ backgroundImage: `url(${Image})` }}>
+                    </div>
+                </CommonHeader>
 
                 <div className='notes-part-body'>
                     <div className='notes-part-left'>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Header from './Header/Header';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import PartNoteStructure from '../PartNoteStructure/PartNoteStructure';
@@ -7,6 +6,8 @@ import axios from 'axios';
 import { API } from '../../../API/Api';
 import OtherNotesLink from '../OtherNotesLink/OtherNotesLink';
 import { Helmet } from 'react-helmet';
+import Image from '../../../Images/react.png';
+import CommonHeader from '../CommonHeader/CommonHeader';
 
 function ReactNotes() {
   const [reactNotes, setReactNotes] = useState("");
@@ -37,7 +38,11 @@ function ReactNotes() {
           </title>
         </Helmet>
 
-        <Header />
+        <CommonHeader>
+          <div className='notes-part-header' style={{ backgroundImage: `url(${Image})` }}>
+
+          </div>
+        </CommonHeader>
 
         <div className='notes-part-body'>
           <div className='notes-part-left'>

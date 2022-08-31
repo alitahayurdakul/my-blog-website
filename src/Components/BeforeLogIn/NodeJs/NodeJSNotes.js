@@ -5,9 +5,9 @@ import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
 import OtherNotesLink from '../OtherNotesLink/OtherNotesLink';
 import PartNoteStructure from '../PartNoteStructure/PartNoteStructure';
-import NodeJsHeader from './Header/Header';
 import Helmet from 'react-helmet';
-
+import Image from '../../../Images/nodejs.png';
+import CommonHeader from '../CommonHeader/CommonHeader';
 function NodeJSNotes() {
 
     const [nodeJSNotes, setNodeJSNotes] = useState([]);
@@ -21,7 +21,8 @@ function NodeJSNotes() {
                 })
         }
         getNodeJsNotes()
-    }, [setNodeJSNotes])
+    }, [setNodeJSNotes]);
+    
     return (
         <>
             <Navbar />
@@ -33,7 +34,10 @@ function NodeJSNotes() {
                     </title>
                 </Helmet>
 
-                <NodeJsHeader />
+                <CommonHeader >
+                <div className='notes-part-header' style={{backgroundImage:`url(${Image})`}}>
+                    </div>
+                </CommonHeader>
 
                 <div className='notes-part-body'>
                     <div className='notes-part-left'>

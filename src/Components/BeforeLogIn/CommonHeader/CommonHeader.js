@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class NodeJsHeader extends Component {
+class CommonHeader extends Component {
     render() {
         return (
             <>
@@ -9,4 +9,4 @@ class NodeJsHeader extends Component {
         )
     }
 }
-export default NodeJsHeader;
+export default CommonHeader;

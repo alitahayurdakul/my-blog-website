@@ -5,8 +5,9 @@ import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
 import OtherNotesLink from '../OtherNotesLink/OtherNotesLink';
 import PartNoteStructure from '../PartNoteStructure/PartNoteStructure';
-import OtherHeader from './Header/OtherHeader';
 import Helmet from 'react-helmet';
+import CommonHeader from '../CommonHeader/CommonHeader';
+import Image from '../../../Images/others.jpeg';
 
 function Others() {
   const [otherNotes, setOtherNotes] = useState([]);
@@ -32,7 +33,11 @@ function Others() {
           </title>
         </Helmet>
 
-        <OtherHeader />
+        <CommonHeader >
+          <div className='notes-part-header' style={{ backgroundImage: `url(${Image})` }}>
+
+          </div>
+        </CommonHeader>
 
         <div className='notes-part-body'>
           <div className='notes-part-left'>

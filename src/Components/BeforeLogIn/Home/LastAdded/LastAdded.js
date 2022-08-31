@@ -10,7 +10,7 @@ class LastAdded extends Component {
     }
 
     componentDidMount = async () => {
-        await axios.get(API + "/notes/list")
+        await axios.get(`${API}/notes/list`)
             .then(response => {
                 let lastAddedNotes = [];
                 if (response.data.length < 9) {
