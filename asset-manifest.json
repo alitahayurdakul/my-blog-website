@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/my-blog-website/static/css/main.4b724118.css",
-    "main.js": "/my-blog-website/static/js/main.b3af4743.js",
+    "main.js": "/my-blog-website/static/js/main.c4c87444.js",
     "static/media/react-native.png": "/my-blog-website/static/media/react-native.c195d5a5a8ad3b85c4a5.png",
     "static/media/nodejs.png": "/my-blog-website/static/media/nodejs.a8c363ae2dce5e61cea1.png",
     "static/media/others.jpeg": "/my-blog-website/static/media/others.c800ea8cefa5d34947dc.jpeg",
@@ -9,10 +9,10 @@
     "static/media/react.png": "/my-blog-website/static/media/react.8887fc1e8ca4b52d9e4d.png",
     "index.html": "/my-blog-website/index.html",
     "main.4b724118.css.map": "/my-blog-website/static/css/main.4b724118.css.map",
-    "main.b3af4743.js.map": "/my-blog-website/static/js/main.b3af4743.js.map"
+    "main.c4c87444.js.map": "/my-blog-website/static/js/main.c4c87444.js.map"
   },
   "entrypoints": [
     "static/css/main.4b724118.css",
-    "static/js/main.b3af4743.js"
+    "static/js/main.c4c87444.js"
   ]
 }
