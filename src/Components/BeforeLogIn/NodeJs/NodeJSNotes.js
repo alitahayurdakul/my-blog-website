@@ -14,7 +14,7 @@ function NodeJSNotes() {
 
     useEffect(() => {
         const getNodeJsNotes = async () => {
-            await axios.get(API + "/notes/group-notes/nodejs")
+            await axios.get(`${API}/notes/group-notes/nodejs`)
                 .then(response => setNodeJSNotes(response.data))
                 .catch(() => {
 
@@ -22,7 +22,7 @@ function NodeJSNotes() {
         }
         getNodeJsNotes()
     }, [setNodeJSNotes]);
-    
+
     return (
         <>
             <Navbar />
@@ -35,7 +35,7 @@ function NodeJSNotes() {
                 </Helmet>
 
                 <CommonHeader >
-                <div className='notes-part-header' style={{backgroundImage:`url(${Image})`}}>
+                    <div className='notes-part-header' style={{ backgroundImage: `url(${Image})` }}>
                     </div>
                 </CommonHeader>
 

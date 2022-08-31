@@ -15,7 +15,7 @@ function Others() {
   useEffect(() => {
 
     const getOtherNotes = async () => {
-      await axios.get(API + "/notes/group-notes/other")
+      await axios.get(`${API}/notes/group-notes/other`)
         .then(response => setOtherNotes(response.data));
     }
 

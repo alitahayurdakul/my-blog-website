@@ -20,9 +20,6 @@ function NotePage() {
                 .then(response => {
                     setNote(response.data)
                 })
-            // .catch(() => {
-
-            // })
         }
 
         getNote();
