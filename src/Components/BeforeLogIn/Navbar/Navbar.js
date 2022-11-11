@@ -30,7 +30,9 @@ class Navbar extends Component {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
+
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+
                             <li className="nav-item">
                                 <Link to="/" className='nav-link active'>AnaSayfa</Link >
                             </li>
@@ -56,9 +58,15 @@ class Navbar extends Component {
                             </li>
 
                             <li className="nav-item">
-                                <Link to="/english-test" className='nav-link'>İngilizce Test</Link >
+                                <a href="#" className='nav-link'>Testler</a>
+                                <div className='test-dropdown'>
+                                    <Link to="/english-test" className='nav-link'>İngilizce Test</Link>
+                                    <Link to="/react-test" className='nav-link'>React Test</Link>
+                                </div>
                             </li>
+
                         </ul>
+
                         <form className="d-flex">
                             <div className="footer-social">
                                 <ul>
@@ -109,7 +117,7 @@ class Navbar extends Component {
             </nav>
         )
     }
-}
+};
 
 const mapStateToProps = state => {
     return {

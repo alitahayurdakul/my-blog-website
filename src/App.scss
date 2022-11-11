@@ -53,6 +53,7 @@ a {
   .container-fluid {
     width: 75%;
     margin-inline: auto;
+    align-items: center;
   }
 
   .navbar-brand {
@@ -61,6 +62,29 @@ a {
 
   .nav-link {
     font-size: 17px;
+  }
+
+  .test-dropdown {
+    position: absolute;
+    display: none;
+    background-color: #ec7424;
+    border-radius: 5px;
+
+    a {
+      padding-inline: 20px !important ;
+      text-align: center;
+      border-radius: 5px;
+    }
+  }
+
+  .nav-item:hover {
+    .test-dropdown {
+      display: block;
+      a:hover {
+        background-color: white;
+        color: #0084ff !important;
+      }
+    }
   }
 
   a {
@@ -220,7 +244,7 @@ a {
     margin-top: 20px;
     color: rgb(201, 50, 50);
     background-color: $white-background;
-    background-position: center; 
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }

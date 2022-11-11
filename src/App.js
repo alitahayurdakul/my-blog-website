@@ -22,8 +22,9 @@ import EnglishWordAdd from './Components/AfterLogIn/EnglishWords/EnglishWordAdd/
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { setIsLogin } from './redux/actions/currencyActions';
-import EnglishTest from './Components/BeforeLogIn/EnglishTest/EnglishTest';
+import EnglishTest from './Components/BeforeLogIn/Tests/EnglishTest/EnglishTest';
 import MailOperations from './Components/AfterLogIn/Mail/MailOperations';
+import ReactTest from './Components/BeforeLogIn/Tests/ReactTest/ReactTest';
 
 axios.defaults.withCredentials = true;
 
@@ -44,7 +45,7 @@ function App(props) {
 
   useEffect(() => {
     getLoggedIn();
-  }, [])
+  }, []);
 
   return (
       <Suspense fallback={<div>Yükleniyor...</div>}>
@@ -61,6 +62,7 @@ function App(props) {
           <Route path="/react-native" element={<ReactNativeNotes />} />
           <Route path="/react-native/:url" element={<NotePage />} />
           <Route path="/english-test/" element={<EnglishTest />} />
+          <Route path="/react-test/" element={<ReactTest />} />
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/forget-password" element={<ForgetPassword />} />
           {

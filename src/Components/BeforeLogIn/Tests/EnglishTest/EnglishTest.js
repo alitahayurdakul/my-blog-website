@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React, { Component } from 'react'
-import { API } from '../../../API/Api';
-import Navbar from '../Navbar/Navbar';
-import OtherNotesLink from '../OtherNotesLink/OtherNotesLink';
+import { API } from '../../../../API/Api';
+import Navbar from '../../Navbar/Navbar';
+import OtherNotesLink from '../../OtherNotesLink/OtherNotesLink';
 import { createRandomNumber } from './createRandomNumber';
 import { Helmet } from 'react-helmet';
 
@@ -71,9 +71,11 @@ class EnglishTest extends Component {
         return (
             <>
                 <Navbar />
+
                 <Helmet>
                     <title>İngilizce Test | ALİ TAHA YURDAKUL</title>
                 </Helmet>
+
                 <div className='notes-part'>
 
                     <div className='notes-part-body'>
